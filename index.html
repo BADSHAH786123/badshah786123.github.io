@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paragraph Writing Practice</title>
+
+    <meta name="description" content="Free paragraph writing practice website for students. Write and improve your paragraphs easily.">
+
+    <style>
+        body {
+            background: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .box {
+            background: #1e1e1e;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 12px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            background: #2b2b2b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            background: #00bcd4;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Paragraph Writing Practice</h2>
+
+    <textarea placeholder="Write your paragraph here..."></textarea>
+
+    <button>Submit</button>
+</div>
+
+</body>
+</html>
