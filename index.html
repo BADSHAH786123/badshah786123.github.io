@@ -12,7 +12,7 @@
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             color: #ffffff;
-            scroll-behavior: smooth; /* Smooth scroll */
+            scroll-behavior: smooth;
         }
 
         /* Navbar styles */
@@ -36,7 +36,6 @@
             transition: 0.3s;
         }
 
-        /* Animated underline effect */
         .navbar a::after {
             content: '';
             display: block;
@@ -63,19 +62,13 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.7);
         }
 
-        h1 {
+        h1, h2, h3 {
             text-align: center;
-            color: #00e5ff;
-            margin-bottom: 5px;
         }
 
-        .subtitle {
-            text-align: center;
-            color: #cccccc;
-            font-size: 15px;
-            margin-top: -5px;
-            margin-bottom: 15px;
-        }
+        h1 { color: #00e5ff; margin-bottom: 5px; }
+        .subtitle { text-align: center; color: #cccccc; font-size: 15px; margin-top: -5px; margin-bottom: 15px; }
+        h2, h3 { color: #00e5ff; margin-top: 20px; margin-bottom: 10px; }
 
         p {
             font-size: 16px;
@@ -125,6 +118,17 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            .container { padding: 20px; margin: 30px 15px; }
+            .navbar a { margin: 0 10px; font-size: 14px; }
+            button { padding: 8px 20px; font-size: 14px; }
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+            h3 { font-size: 18px; }
+            p { font-size: 15px; }
+        }
     </style>
 </head>
 <body>
@@ -137,39 +141,70 @@
     <a href="#contact">Contact</a>
 </div>
 
-<!-- Main content container -->
+<!-- Home Section -->
 <div class="container" id="home">
     <h1>Paragraph Writing Practice</h1>
     <p class="subtitle">Improve your writing skills with daily practice</p>
     <hr>
-
     <p class="fade">
         Paragraph writing helps students express their ideas clearly.
         It improves vocabulary, grammar, and confidence.
         Regular practice makes writing easy and effective.
     </p>
-
     <p class="fade">
         Writing regularly helps students organize their thoughts
         and express ideas confidently. This platform is designed
         to help learners grow step by step.
     </p>
-
     <div style="text-align:center;">
-        <button>Start Practicing</button>
+        <a href="#practice">
+            <button>Start Practicing</button>
+        </a>
     </div>
-
-    <p class="author">Made by Umar</p>
 </div>
 
+<!-- Practice Section -->
+<div class="container" id="practice">
+    <h2>Practice Section</h2>
+    <hr>
+    <p class="fade">
+        Start writing your own paragraphs here. Focus on clarity, grammar, and creativity.
+        Add daily exercises to improve step by step.
+    </p>
+</div>
+
+<!-- About / Sponsor Section -->
+<div class="container" id="about">
+    <h2>About & Sponsor</h2>
+    <p style="text-align:center; color:#cccccc; font-size:15px; line-height:1.6;">
+        Sponsored by <strong>Mohammed Umar Lone</strong><br>
+        This platform is designed to inspire and help learners grow daily.
+    </p>
+
+    <h3>Powerful Thoughts</h3>
+    <p style="text-align:center; color:#cccccc; font-size:14px; font-style:italic;">
+        "The more you practice, the sharper your mind becomes."<br>
+        "Consistency beats talent when talent doesn’t practice."<br>
+        "Write not to impress, but to express."
+    </p>
+</div>
+
+<!-- Contact Section -->
+<div class="container" id="contact">
+    <h2>Contact</h2>
+    <hr>
+    <p style="text-align:center; color:#cccccc; font-size:15px; line-height:1.6;">
+        For queries or support, contact: <strong>Mohammed Umar Lone</strong>
+    </p>
+</div>
+
+<!-- Footer -->
+<p class="author">Made by Umar</p>
+
+<!-- JS for fade-in animation -->
 <script>
-    // Fade-in on scroll
     const faders = document.querySelectorAll('.fade');
-
-    const appearOptions = {
-        threshold: 0.3
-    };
-
+    const appearOptions = { threshold: 0.3 };
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) return;
@@ -177,10 +212,7 @@
             observer.unobserve(entry.target);
         });
     }, appearOptions);
-
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    });
+    faders.forEach(fader => appearOnScroll.observe(fader));
 </script>
 
 </body>
