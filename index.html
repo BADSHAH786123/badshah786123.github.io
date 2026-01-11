@@ -1,21 +1,42 @@
+<!-- Line 1 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Line 4 -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paragraph Writing Practice</title>
 <style>
-/* Body and background */
-body { margin:0; padding:0; font-family: Arial, sans-serif; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color:#fff; scroll-behavior: smooth; }
+/* Line 9: Body and background */
+body {
+    margin:0; padding:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color:#fff;
+    scroll-behavior: smooth;
+}
 
-/* Navbar */
-.navbar { display:flex; justify-content:center; background: rgba(0,0,0,0.7); padding:15px 0; position: sticky; top:0; z-index:100; box-shadow:0 2px 8px rgba(0,0,0,0.5); }
-.navbar a { color:#fff; text-decoration:none; margin:0 20px; font-size:16px; position:relative; transition:0.3s; }
-.navbar a::after { content:''; display:block; width:0; height:2px; background:#00e5ff; transition: width 0.3s; position:absolute; bottom:-5px; left:0; }
+/* Line 17: Navbar */
+.navbar {
+    display:flex; justify-content:center;
+    background: rgba(0,0,0,0.7); padding:15px 0;
+    position: sticky; top:0; z-index:100;
+    box-shadow:0 2px 8px rgba(0,0,0,0.5);
+}
+.navbar a {
+    color:#fff; text-decoration:none; margin:0 20px; font-size:16px; position:relative; transition:0.3s;
+}
+.navbar a::after {
+    content:''; display:block; width:0; height:2px; background:#00e5ff; transition: width 0.3s; position:absolute; bottom:-5px; left:0;
+}
 .navbar a:hover::after { width:100%; }
 
-/* Container */
-.container { max-width:700px; margin:50px auto; background: rgba(0,0,0,0.6); padding:30px; border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.7); }
+/* Line 32: Container */
+.container {
+    max-width:700px; margin:50px auto;
+    background: rgba(0,0,0,0.6); padding:30px;
+    border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.7);
+}
 h1,h2,h3{text-align:center;}
 h1{color:#00e5ff; margin-bottom:5px;}
 .subtitle{text-align:center;color:#ccc;font-size:15px;margin-top:-5px;margin-bottom:15px;}
@@ -23,17 +44,22 @@ h2,h3{color:#00e5ff;margin:20px 0 10px 0;}
 p{font-size:16px;line-height:1.7;text-align:justify;}
 hr{border:0;height:1px;background:#00e5ff;margin:20px 0;}
 
-/* Button */
-button{ background:#00e5ff; color:#000; border:none; padding:10px 25px; font-size:15px; border-radius:20px; cursor:pointer; margin:15px 0; transition:0.3s;}
+/* Line 46: Button */
+button{
+    background:#00e5ff;color:#000;border:none;
+    padding:10px 25px;font-size:15px;border-radius:20px;
+    cursor:pointer;margin:15px 0;transition:0.3s;
+}
 button:hover{ background:#00b8e6; }
 
+/* Line 55: Footer author */
 .author{text-align:center;margin-top:25px;font-size:13px;color:#aaa;}
 
-/* Fade-in animation */
+/* Line 58: Fade-in animation */
 .fade{opacity:0; transform:translateY(20px); transition: all 1s ease-in-out;}
 .fade.show{opacity:1; transform:translateY(0);}
 
-/* Mobile responsiveness */
+/* Line 63: Mobile responsive */
 @media screen and (max-width:768px){
     .container{padding:20px;margin:30px 15px;}
     .navbar a{margin:0 10px;font-size:14px;}
@@ -44,7 +70,7 @@ button:hover{ background:#00b8e6; }
 </head>
 <body>
 
-<!-- Navbar -->
+<!-- Line 78: Navbar -->
 <div class="navbar">
     <a href="#" data-target="home">Home</a>
     <a href="#" data-target="practice">Practice</a>
@@ -52,8 +78,8 @@ button:hover{ background:#00b8e6; }
     <a href="#" data-target="contact">Contact</a>
 </div>
 
-<!-- Home Section -->
-<div class="container" id="home">
+<!-- Line 86: Home Section -->
+<div class="container" id="home" style="scroll-margin-top:80px;">
     <h1>Paragraph Writing Practice</h1>
     <p class="subtitle">Improve your writing skills with daily practice</p>
     <hr>
@@ -61,18 +87,18 @@ button:hover{ background:#00b8e6; }
     <p class="fade">Writing regularly helps students organize their thoughts and express ideas confidently. This platform is designed to help learners grow step by step.</p>
 </div>
 
-<!-- Practice Section -->
-<div class="container" id="practice">
+<!-- Line 97: Practice Section -->
+<div class="container" id="practice" style="scroll-margin-top:80px;">
     <h2>Practice Section</h2>
     <hr>
-    <p class="fade">Start writing your paragraphs here. Everything is editable and fully functional. You can add multiple paragraphs, exercises, or topics. This section works perfectly with the button below.</p>
-    <div style="text-align:center;">
+    <p class="fade">Start writing your paragraphs here. Everything is editable and fully functional. You can add multiple paragraphs, exercises, or topics.</p>
+    <div style="text-align:center; margin-top:20px;">
         <button id="practiceBtn">Start Practicing</button>
     </div>
 </div>
 
-<!-- About / Sponsor Section -->
-<div class="container" id="about">
+<!-- Line 107: About / Sponsor Section -->
+<div class="container" id="about" style="scroll-margin-top:80px;">
     <h2>About & Sponsor</h2>
     <p style="text-align:center;color:#ccc;font-size:15px;line-height:1.6;">
         Sponsored by <strong>Mohammed Umar Lone</strong><br>
@@ -86,8 +112,8 @@ button:hover{ background:#00b8e6; }
     </p>
 </div>
 
-<!-- Contact Section -->
-<div class="container" id="contact">
+<!-- Line 120: Contact Section -->
+<div class="container" id="contact" style="scroll-margin-top:80px;">
     <h2>Contact</h2>
     <hr>
     <p style="text-align:center;color:#ccc;font-size:15px;line-height:1.6;">
@@ -95,10 +121,10 @@ button:hover{ background:#00b8e6; }
     </p>
 </div>
 
-<!-- Footer -->
+<!-- Line 129: Footer -->
 <p class="author">Made by Umar</p>
 
-<!-- JS -->
+<!-- Line 132: JS -->
 <script>
     // Fade-in animation
     const faders = document.querySelectorAll('.fade');
@@ -112,34 +138,26 @@ button:hover{ background:#00b8e6; }
     }, appearOptions);
     faders.forEach(fader => appearOnScroll.observe(fader));
 
-    // Scroll to section when navbar link is clicked
+    // Navbar links smooth scroll
     document.querySelectorAll('.navbar a').forEach(link => {
         link.addEventListener('click', function(e){
             e.preventDefault();
             const targetId = this.getAttribute('data-target');
-            const targetSection = document.getElementById(targetId);
-            const offset = 50; // adjust for navbar
-            const topPos = targetSection.getBoundingClientRect().top + window.scrollY - offset;
-            window.scrollTo({ top: topPos, behavior:'smooth' });
+            document.getElementById(targetId).scrollIntoView({behavior:'smooth'});
         });
     });
 
     // Start Practicing button scrolls to Practice section
     document.getElementById('practiceBtn').addEventListener('click', function(){
-        const practiceSection = document.getElementById('practice');
-        const offset = 50;
-        const topPos = practiceSection.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top: topPos, behavior:'smooth' });
+        document.getElementById('practice').scrollIntoView({behavior:'smooth'});
     });
 
-    // Open page directly on Practice section when site loads
+    // Open page directly on Practice section on load
     window.addEventListener('load', function(){
-        const practiceSection = document.getElementById('practice');
-        const offset = 50;
-        const topPos = practiceSection.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top: topPos, behavior:'instant' }); // instantly open Practice
+        document.getElementById('practice').scrollIntoView();
     });
 </script>
 
+<!-- Line 163 -->
 </body>
 </html>
