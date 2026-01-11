@@ -3,40 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paragraph Website</title>
+    <title>Paragraph Writing Practice</title>
+    <meta name="description" content="Free paragraph writing practice website for students. Write and improve your paragraphs easily.">
     <style>
         body {
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* White text */
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            padding: 50px;
-            text-align: center;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            background-color: #fff;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            max-width: 600px;
-            margin: 20px auto;
-            line-height: 1.6;
-            font-size: 18px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            border: 1px solid #444;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #03a9f4;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0288d1;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Paragraph Website</h1>
-    <p>
-        This is a simple paragraph website hosted on GitHub. 
-        You can write anything here. For example, your thoughts, a story, or even a quote. 
-        You can also add more paragraphs below if you want.
-    </p>
-    <p>
-        Creating websites with HTML and CSS is fun and easy! 
-        GitHub Pages allows you to host your website for free. 
-        Just push your files to a repository and enable GitHub Pages.
-    </p>
+
+    <h1>Paragraph Writing Practice</h1>
+    
+    <p>Write your paragraph below:</p>
+    
+    <!-- THIS IS THE BLANK -->
+    <textarea placeholder="Type your paragraph here..."></textarea>
+    
+    <button onclick="alert('Paragraph submitted!')">Submit</button>
+
 </body>
 </html>
