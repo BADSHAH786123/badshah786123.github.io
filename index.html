@@ -1,66 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paragraph Writing Practice</title>
-<h1>Paragraph Writing Practice</h1>
-
-</p>Paragraph writing helps students improve their writing skills.
-</p>
-    <p style="text-align:center; margin-top:20px; font-size:14px; color:#bbbbbb;">
-    Made by Umar
-</p>
-    <meta name="description" content="Free paragraph writing practice website for students. Write and improve your paragraphs easily.">
-
-    <flex     body {
-            background: #121212;
-            color: white;
+    <style>
+        /* Body and background */
+        body {
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            scroll-behavior: smooth; /* Smooth scroll */
+        }
+
+        /* Navbar styles */
+        .navbar {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            background-color: rgba(0,0,0,0.7);
+            padding: 15px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        .box {
-            background: #1e1e1e;
-            padding: 20px;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 12px;
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+            position: relative;
+            transition: 0.3s;
         }
 
-        textarea {
+        /* Animated underline effect */
+        .navbar a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #00e5ff;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        .navbar a:hover::after {
             width: 100%;
-            height: 120px;
-            background: #2b2b2b;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 10px;
+        }
+
+        /* Container card */
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.7);
+        }
+
+        h1 {
+            text-align: center;
+            color: #00e5ff;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #cccccc;
+            font-size: 15px;
+            margin-top: -5px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #00e5ff;
+            margin: 20px 0;
         }
 
         button {
-            width: 100%;
-            margin-top: 10px;
-            padding: 10px;
-            background: #00bcd4;
+            display: inline-block;
+            background: #00e5ff;
+            color: #000;
             border: none;
-            border-radius: 8px;
-            font-size: 16px;
+            padding: 10px 25px;
+            font-size: 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 15px 0;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #00b8e6;
+        }
+
+        .author {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 13px;
+            color: #aaaaaa;
+        }
+
+        /* Fade-in animation */
+        .fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease-in-out;
+        }
+
+        .fade.show {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-
 <body>
 
-<div class="box">
-    <h2>Paragraph Writing Practice</h2>
-
-    <textarea placeholder="Write your paragraph here..."></textarea>
-
-    <button>Submit</button>
+<!-- Navbar -->
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#practice">Practice</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
 </div>
+
+<!-- Main content container -->
+<div class="container" id="home">
+    <h1>Paragraph Writing Practice</h1>
+    <p class="subtitle">Improve your writing skills with daily practice</p>
+    <hr>
+
+    <p class="fade">
+        Paragraph writing helps students express their ideas clearly.
+        It improves vocabulary, grammar, and confidence.
+        Regular practice makes writing easy and effective.
+    </p>
+
+    <p class="fade">
+        Writing regularly helps students organize their thoughts
+        and express ideas confidently. This platform is designed
+        to help learners grow step by step.
+    </p>
+
+    <div style="text-align:center;">
+        <button>Start Practicing</button>
+    </div>
+
+    <p class="author">Made by Umar</p>
+</div>
+
+<script>
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade');
+
+    const appearOptions = {
+        threshold: 0.3
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
 
 </body>
 </html>
