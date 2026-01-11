@@ -52,16 +52,28 @@ button:hover{
 </div>
 
 <!-- Practice Section -->
+    <!-- Practice Section -->
 <div class="container" id="practice">
     <h2>Practice Section</h2>
     <hr>
     <p>Start writing your paragraphs here. Everything is editable and fully functional. You can add multiple paragraphs, exercises, or topics.</p>
     <div style="text-align:center; margin-top:20px;">
-        <button id="practiceBtn" onclick="window.location='#practice'">Start Practicing</button>
+        <!-- This button now uses smooth scroll via JS -->
+        <button id="practiceBtn">Start Practicing</button>
     </div>
 </div>
 
-<!-- About Section -->
+<script>
+    // Make Start Practicing button scroll smoothly to Practice section
+    document.getElementById('practiceBtn').addEventListener('click', function(){
+        document.getElementById('practice').scrollIntoView({behavior:'smooth'});
+    });
+</script>
+>Start writing your paragraphs here. Everything is editable and fully functional. You can add multiple paragraphs, exercises, or topics.</p>
+    <div style="text-align:center; margin-top:20px;">
+        <button id="practiceBtn" onclick="window.location='#practice'">Start Practicing</button>
+    </div>
+</div>div!-- About Section -->
 <div class="container" id="about">
     <h2>About & Sponsor</h2>
     <p>Sponsored by Mohammed Umar Lone. This platform helps learners improve writing skills step by step.</p>
