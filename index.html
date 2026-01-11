@@ -1,48 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-    <div style="
-position:fixed;
-left:8px;
-top:50%;
-transform:translateY(-50%);
-color:#00ffff;
-font-weight:bold;
-font-size:14px;
-">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umar | Home & Contact</title>
 
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* Navbar */
+nav {
+  background: #111;
+  padding: 15px;
+  text-align: center;
+}
+
+nav span {
+  margin: 0 20px;
+  color: #ff2a2a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Sections */
+.section {
+  display: none;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Icons */
+.icons a {
+  color: #ff2a2a;
+  font-size: 28px;
+  margin: 15px;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  color: #fff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <span onclick="showSection('home')">Home</span>
+  <span onclick="showSection('contact')">Contact</span>
+</nav>
+
+<!-- HOME SECTION -->
+<div id="home" class="section active">
+  <h2>Welcome</h2>
+  <p>
+    I am a learner focused on self-growth, discipline, and continuous improvement.
+  </p>
 </div>
 
-    <div style="
-text-align:center;
-margin-top:25px;
-color:#aaa;
-font-style:italic;
-font-size:14px;
-">
-“Practice makes thoughts powerful.”
-    </div> 
-    <div style="
-text-align:center;
-margin-top:25px;
-color:#ff2a2a;
-font-style:italic;
-font-size:15px;
-">
-“Discipline today creates power tomorrow.”
+<!-- CONTACT SECTION -->
+<div id="contact" class="section">
+  <h3>MOHAMMED UMAR LONE</h3>
+  <p>Nickname: <strong>BADSHAH</strong></p>
+
+  <div class="icons">
+    <a href="https://instagram.com/BADSHAH.__.786" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://facebook.com/WHOXIS.UMAR" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://t.me/BADSHAH" target="_blank">
+      <i class="fab fa-telegram"></i>
+    </a>
+  </div>
 </div>
 
-    <div style="
-position:fixed;
-left:8px;
-top:50%;
-transform:translateY(-50%);
-color:#ff2a2a;
-font-weight:bold;
-font-size:14px;
-">
-Sponsor: MOHAMMED UMAR LONE
-</div>
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(sec => {
+    sec.classList.remove('active');
+  });
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paragraph Writing Practice</title>
