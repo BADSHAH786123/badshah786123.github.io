@@ -1,34 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paragraph Writing Practice</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free paragraph writing practice website for students. Write and improve your paragraphs easily.">
     <style>
         body {
-            background-color: #121212;
-            color: #ffffff;
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* White text */
             font-family: Arial, sans-serif;
             padding: 20px;
         }
-        .box {
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
             background-color: #1e1e1e;
-            padding: 20px;
-            border-radius: 8px;
+            color: #ffffff;
+            border: 1px solid #444;
+            border-radius: 5px;
         }
-        h1 {
-            color: #00e5ff;
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #03a9f4;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0288d1;
         }
     </style>
 </head>
 <body>
 
-<div class="box">
     <h1>Paragraph Writing Practice</h1>
-    <p>
-        This website is created for practicing paragraph writing.
-        Students can read, write, and improve their writing skills here.
-    </p>
-</div>
+    
+    <p>Write your paragraph below:</p>
+    
+    <!-- THIS IS THE BLANK -->
+    <textarea placeholder="Type your paragraph here..."></textarea>
+    
+    <button onclick="alert('Paragraph submitted!')">Submit</button>
 
 </body>
 </html>
