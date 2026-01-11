@@ -5,22 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paragraph Writing Practice</title>
     <style>
-        /* Background and body */
+        /* Body and background */
         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             color: #ffffff;
-            font-family: Arial, sans-serif;
-            padding: 20px;
         }
 
-        /* Center container */
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0,0,0,0.7);
+            padding: 15px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        /* Animated underline effect */
+        .navbar a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #00e5ff;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        /* Container card */
         .container {
-            max-width: 600px;
-            margin: auto;
+            max-width: 700px;
+            margin: 50px auto;
             background-color: rgba(0, 0, 0, 0.6);
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 15px rgba(0,0,0,0.7);
         }
 
         h1 {
@@ -60,6 +99,7 @@
             border-radius: 20px;
             cursor: pointer;
             margin: 15px 0;
+            transition: 0.3s;
         }
 
         button:hover {
@@ -76,6 +116,15 @@
 </head>
 <body>
 
+<!-- Navbar -->
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Practice</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</div>
+
+<!-- Main content container -->
 <div class="container">
     <h1>Paragraph Writing Practice</h1>
     <p class="subtitle">Improve your writing skills with daily practice</p>
