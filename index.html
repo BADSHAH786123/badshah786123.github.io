@@ -136,7 +136,25 @@ function showSection(id) {
         }
     </style>
 </head>
-<body>
+<body> <div id="practice">
+  <!-- Your paragraph writing code here -->
+</div>
+
+<!-- VISITOR COUNTER START -->
+<div style="text-align:center; margin-top:20px; color:#ff2a2a; font-weight:bold;">
+  Visitors: <span id="visitorCount">0</span>
+</div>
+
+<script>
+const url = 'https://api.countapi.xyz/hit/badshah786123-website/visits';
+fetch(url)
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('visitorCount').textContent = data.value;
+  })
+  .catch(err => console.log('Counter error:', err));
+</script>
+<!-- VISITOR COUNTER END -->
 
     <h1>Paragraph Writing Practice</h1>
     
