@@ -5,88 +5,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paragraph Writing Practice</title>
 <style>
-    body {
-        margin:0; padding:0;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-        color:#fff;
-    }
-    .navbar {
-        display:flex; justify-content:center;
-        background: rgba(0,0,0,0.7); padding:15px 0;
-        position: sticky; top:0; z-index:100;
-        box-shadow:0 2px 8px rgba(0,0,0,0.5);
-    }
-    .navbar a {
-        color:#fff; text-decoration:none; margin:0 20px;
-        font-size:16px; position:relative; transition:0.3s;
-    }
-    .navbar a::after {
-        content:''; display:block; width:0; height:2px;
-        background:#00e5ff; transition: width 0.3s;
-        position:absolute; bottom:-5px; left:0;
-    }
-    .navbar a:hover::after { width:100%; }
-    .container {
-        max-width:700px; margin:50px auto;
-        background: rgba(0,0,0,0.6); padding:30px;
-        border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.7);
-    }
-    h1,h2,h3{text-align:center;}
-    h1{color:#00e5ff; margin-bottom:5px;}
-    .subtitle{text-align:center;color:#ccc;font-size:15px;margin-top:-5px;margin-bottom:15px;}
-    h2,h3{color:#00e5ff;margin:20px 0 10px 0;}
-    p{font-size:16px;line-height:1.7;text-align:justify;}
-    hr{border:0;height:1px;background:#00e5ff;margin:20px 0;}
-    button{
-        background:#00e5ff;color:#000;border:none;
-        padding:10px 25px;font-size:15px;border-radius:20px;
-        cursor:pointer;margin:15px 0;transition:0.3s;
-    }
-    button:hover{background:#00b8e6;}
-    .author{text-align:center;margin-top:25px;font-size:13px;color:#aaa;}
-    .fade{opacity:0;transform:translateY(20px);transition:all 1s ease-in-out;}
-    .fade.show{opacity:1;transform:translateY(0);}
-    @media screen and (max-width:768px){
-        .container{padding:20px;margin:30px 15px;}
-        .navbar a{margin:0 10px;font-size:14px;}
-        button{padding:8px 20px;font-size:14px;}
-        h1{font-size:24px;} h2{font-size:20px;} h3{font-size:18px;} p{font-size:15px;}
-    }
+/* Body and background */
+body { margin:0; padding:0; font-family: Arial, sans-serif; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color:#fff; scroll-behavior: smooth; }
+
+/* Navbar */
+.navbar { display:flex; justify-content:center; background: rgba(0,0,0,0.7); padding:15px 0; position: sticky; top:0; z-index:100; box-shadow:0 2px 8px rgba(0,0,0,0.5); }
+.navbar a { color:#fff; text-decoration:none; margin:0 20px; font-size:16px; position:relative; transition:0.3s; }
+.navbar a::after { content:''; display:block; width:0; height:2px; background:#00e5ff; transition: width 0.3s; position:absolute; bottom:-5px; left:0; }
+.navbar a:hover::after { width:100%; }
+
+/* Container */
+.container { max-width:700px; margin:50px auto; background: rgba(0,0,0,0.6); padding:30px; border-radius:12px; box-shadow:0 0 15px rgba(0,0,0,0.7); }
+h1,h2,h3{text-align:center;}
+h1{color:#00e5ff; margin-bottom:5px;}
+.subtitle{text-align:center;color:#ccc;font-size:15px;margin-top:-5px;margin-bottom:15px;}
+h2,h3{color:#00e5ff;margin:20px 0 10px 0;}
+p{font-size:16px;line-height:1.7;text-align:justify;}
+hr{border:0;height:1px;background:#00e5ff;margin:20px 0;}
+
+/* Button */
+button{ background:#00e5ff; color:#000; border:none; padding:10px 25px; font-size:15px; border-radius:20px; cursor:pointer; margin:15px 0; transition:0.3s;}
+button:hover{ background:#00b8e6; }
+
+.author{text-align:center;margin-top:25px;font-size:13px;color:#aaa;}
+
+/* Fade-in animation */
+.fade{opacity:0; transform:translateY(20px); transition: all 1s ease-in-out;}
+.fade.show{opacity:1; transform:translateY(0);}
+
+/* Mobile responsiveness */
+@media screen and (max-width:768px){
+    .container{padding:20px;margin:30px 15px;}
+    .navbar a{margin:0 10px;font-size:14px;}
+    button{padding:8px 20px;font-size:14px;}
+    h1{font-size:24px;} h2{font-size:20px;} h3{font-size:18px;} p{font-size:15px;}
+}
 </style>
 </head>
 <body>
 
 <!-- Navbar -->
 <div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#practice">Practice</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#" data-target="home">Home</a>
+    <a href="#" data-target="practice">Practice</a>
+    <a href="#" data-target="about">About</a>
+    <a href="#" data-target="contact">Contact</a>
 </div>
 
-<!-- Home -->
+<!-- Home Section -->
 <div class="container" id="home">
     <h1>Paragraph Writing Practice</h1>
     <p class="subtitle">Improve your writing skills with daily practice</p>
     <hr>
     <p class="fade">Paragraph writing helps students express their ideas clearly. It improves vocabulary, grammar, and confidence. Regular practice makes writing easy and effective.</p>
     <p class="fade">Writing regularly helps students organize their thoughts and express ideas confidently. This platform is designed to help learners grow step by step.</p>
-
-    <!-- Start Practice Button -->
-    <div style="text-align:center;">
-        <button id="startBtn">Start Practicing</button>
-    </div>
 </div>
 
-<!-- Practice -->
+<!-- Practice Section -->
 <div class="container" id="practice">
     <h2>Practice Section</h2>
     <hr>
-    <p class="fade">Start writing your own paragraphs here. Focus on clarity, grammar, creativity, and organization. You can type multiple paragraphs and add topics daily. The practice area is fully editable.</p>
+    <p class="fade">Start writing your paragraphs here. Everything is editable and fully functional. You can add multiple paragraphs, exercises, or topics. This section works perfectly with the button below.</p>
+    <div style="text-align:center;">
+        <button id="practiceBtn">Start Practicing</button>
+    </div>
 </div>
 
-<!-- About / Sponsor -->
+<!-- About / Sponsor Section -->
 <div class="container" id="about">
     <h2>About & Sponsor</h2>
     <p style="text-align:center;color:#ccc;font-size:15px;line-height:1.6;">
@@ -101,7 +86,7 @@
     </p>
 </div>
 
-<!-- Contact -->
+<!-- Contact Section -->
 <div class="container" id="contact">
     <h2>Contact</h2>
     <hr>
@@ -127,9 +112,32 @@
     }, appearOptions);
     faders.forEach(fader => appearOnScroll.observe(fader));
 
-    // Smooth scroll for Start Practicing button
-    document.getElementById('startBtn').addEventListener('click', function(){
-        document.getElementById('practice').scrollIntoView({ behavior: 'smooth' });
+    // Scroll to section when navbar link is clicked
+    document.querySelectorAll('.navbar a').forEach(link => {
+        link.addEventListener('click', function(e){
+            e.preventDefault();
+            const targetId = this.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+            const offset = 50; // adjust for navbar
+            const topPos = targetSection.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top: topPos, behavior:'smooth' });
+        });
+    });
+
+    // Start Practicing button scrolls to Practice section
+    document.getElementById('practiceBtn').addEventListener('click', function(){
+        const practiceSection = document.getElementById('practice');
+        const offset = 50;
+        const topPos = practiceSection.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: topPos, behavior:'smooth' });
+    });
+
+    // Open page directly on Practice section when site loads
+    window.addEventListener('load', function(){
+        const practiceSection = document.getElementById('practice');
+        const offset = 50;
+        const topPos = practiceSection.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: topPos, behavior:'instant' }); // instantly open Practice
     });
 </script>
 
