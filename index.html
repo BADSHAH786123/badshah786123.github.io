@@ -10,28 +10,14 @@ body { margin:0; font-family:Arial,sans-serif; background:#111; color:#fff; }
 h1,h2{ text-align:center; color:#0ff; }
 p{ line-height:1.7; }
 .navbar { display:flex; justify-content:center; background:#000; padding:10px; position:sticky; top:0; }
-.navbar a { color:#fff; margin:0 15px; text-decoration:none; transition:0.3s; }
+.navbar a { color:#fff; margin:0 15px; text-decoration:none; }
 .navbar a:hover{ color:#0ff; }
 .author{text-align:center; margin-top:20px; color:#aaa; font-size:13px; }
-
-/* Start Practicing Button Fancy */
-button{
-    background:#0ff; color:#000; border:none; padding:12px 28px; border-radius:25px; cursor:pointer; margin-top:15px;
-    font-weight:bold; font-size:16px;
-    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
-    transition: all 0.3s ease;
-}
-button:hover{
-    background:#0cc;
-    box-shadow: 0 0 20px #0ff, 0 0 30px #0ff inset;
-    transform: scale(1.05);
-}
 
 /* Mobile responsive */
 @media screen and (max-width:768px){
     .container{padding:20px;margin:30px 15px;}
     .navbar a{margin:0 10px;font-size:14px;}
-    button{padding:10px 22px;font-size:15px;}
 }
 </style>
 </head>
@@ -51,29 +37,14 @@ button:hover{
     <p>Improve your writing skills daily. Start small and grow step by step.</p>
 </div>
 
-<!-- Practice Section -->
-    <!-- Practice Section -->
+<!-- Practice Section (Simple Blank) -->
 <div class="container" id="practice">
     <h2>Practice Section</h2>
     <hr>
     <p>Start writing your paragraphs here. Everything is editable and fully functional. You can add multiple paragraphs, exercises, or topics.</p>
-    <div style="text-align:center; margin-top:20px;">
-        <!-- This button now uses smooth scroll via JS -->
-        <button id="practiceBtn">Start Practicing</button>
-    </div>
 </div>
 
-<script>
-    // Make Start Practicing button scroll smoothly to Practice section
-    document.getElementById('practiceBtn').addEventListener('click', function(){
-        document.getElementById('practice').scrollIntoView({behavior:'smooth'});
-    });
-</script>
->Start writing your paragraphs here. Everything is editable and fully functional. You can add multiple paragraphs, exercises, or topics.</p>
-    <div style="text-align:center; margin-top:20px;">
-        <button id="practiceBtn" onclick="window.location='#practice'">Start Practicing</button>
-    </div>
-</div>div!-- About Section -->
+<!-- About Section -->
 <div class="container" id="about">
     <h2>About & Sponsor</h2>
     <p>Sponsored by Mohammed Umar Lone. This platform helps learners improve writing skills step by step.</p>
